@@ -1,0 +1,476 @@
+/* CSS Variables - Pure Monochrome & Luxury Typography */
+:root {
+    --bg-color: #FFFFFF;
+    --text-primary: #050505;
+    --text-secondary: #555555;
+    --border-color: rgba(5, 5, 5, 0.1);
+    --bg-dark: #050505;
+    --text-light: #FFFFFF;
+
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Outfit', sans-serif;
+    
+    --transition-smooth: all 0.7s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Typography Mechanics */
+h1, h2, h3, .logo, .philosophy-text {
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+em {
+    font-style: italic;
+    font-family: var(--font-display);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.75rem 2rem;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a:not(.btn-primary-small) {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:not(.btn-primary-small)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--text-primary);
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:not(.btn-primary-small):hover::after {
+    width: 100%;
+}
+
+.btn-primary-small {
+    padding: 0.5rem 1.5rem;
+    border-radius: 99px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary-small:hover {
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+/* Fixed Background for Parallax */
+.fixed-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+}
+
+.fixed-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+/* Hero Sections (now transparent on top of fixed-bg) */
+.hero {
+    position: relative;
+    min-height: 100dvh;
+    padding: 8rem 2rem 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+}
+
+.hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.hero-content.centered {
+    align-items: center;
+    text-align: center;
+}
+
+.hero-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.3;
+    color: var(--text-primary);
+    max-width: 45ch;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    animation: float 5s ease-in-out infinite;
+    transition: text-shadow 0.4s ease, transform 0.4s ease;
+    cursor: pointer;
+}
+
+.hero-quote:hover {
+    text-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+
+.eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    max-width: 15ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 40ch;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button in Button Pattern */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0.75rem 0.75rem 2rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border-radius: 99px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    transform: scale(0.98);
+}
+
+.btn-primary:hover .btn-icon {
+    transform: translateX(2px) scale(1.05);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* Services Bento Grid */
+.services {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services-header {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    grid-auto-rows: 22rem;
+}
+
+.bento-card {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    background-color: rgba(0,0,0,0.01);
+}
+
+.bento-card.col-span-2 {
+    grid-column: span 2;
+}
+
+.card-inner {
+    height: 100%;
+    border-radius: calc(2rem - 1rem);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #f7f7f7;
+}
+
+.card-inner.bg-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.card-inner.border-only {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+.card-inner h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-inner p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 40ch;
+}
+
+.card-inner.bg-dark p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer / Contact */
+.footer {
+    padding: 10rem 2rem 4rem 2rem;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-main {
+    margin-bottom: 8rem;
+}
+
+.footer-title {
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 2rem;
+}
+
+.footer-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 99px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition-smooth);
+}
+
+.btn-social:hover {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+    transform: scale(0.98);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.delay-1 { transition-delay: 150ms; }
+.delay-2 { transition-delay: 300ms; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-card.col-span-2 {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero {
+        padding-top: 6rem;
+        min-height: 100dvh;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .eyebrow {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-bg-img {
+        object-position: center;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    
+    .bento-card.col-span-2 {
+        grid-column: span 1;
+    }
+
+    .card-inner {
+        padding: 2rem;
+        min-height: 250px;
+    }
+}
