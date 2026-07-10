@@ -6,6 +6,9 @@
     <title>Sua Melhor Versão | Maquiadora Profissional</title>
     <meta name="description" content="Maquiadora profissional com atendimento a domicílio. Especialista em noivas, formaturas e eventos.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Logo.png">
+    
     <!-- Google Fonts: Cormorant Garamond (Serif) & Outfit (Sans-serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,31 +21,40 @@
 </head>
 <body>
 
+    <!-- Preloader -->
+    <div id="preloader">
+        <h2 class="preloader-quote">
+            "A maquiagem não deve ser uma máscara que esconde quem você é. Ela é uma ferramenta poderosa para trazer à tona a sua luz mais autêntica."
+        </h2>
+    </div>
+
     <!-- Header / Nav -->
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo">Makeup Artist</div>
+            <a href="#inicio" class="nav-logo">
+                <img src="Logo.png" alt="Lívia Duarte">
+            </a>
             <nav class="nav-links">
+                <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
-                <a href="#contato" class="btn-primary-small">Agendar</a>
+                <!-- INSIRA SEU NÚMERO NO LUGAR DE "55SEUNUMEROAQUI" (Ex: 5511999999999) -->
+                <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá,%20gostaria%20de%20agendar%20um%20horário" target="_blank" class="btn-primary-small">Agendar</a>
             </nav>
         </div>
     </header>
 
-    <!-- Fixed Background for Parallax Effect -->
-    <div class="fixed-bg">
-        <img src="Home.png" alt="Maquiagem Profissional" class="fixed-bg-img">
-    </div>
+
 
     <!-- Section 1: Hero -->
     <section class="hero" id="inicio">
         <div class="hero-content centered reveal">
-            <span class="eyebrow">Atendimento a Domicílio</span>
+
             <h1 class="hero-title">A arte de revelar a sua <em>melhor</em> versão.</h1>
-            <p class="hero-subtitle">Maquiagem sofisticada e sob medida para casamentos, formaturas e momentos inesquecíveis. Realçamos o que você tem de mais belo.</p>
+
             <div class="hero-actions">
-                <a href="#contato" class="btn-primary">
+                <!-- INSIRA SEU NÚMERO NO LUGAR DE "55SEUNUMEROAQUI" -->
+                <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá,%20gostaria%20de%20agendar%20um%20horário" target="_blank" class="btn-primary">
                     Agende seu horário
                     <div class="btn-icon">
                         <i class="ph ph-arrow-right"></i>
@@ -52,12 +64,28 @@
         </div>
     </section>
 
-    <!-- Section 2: Philosophy Quote -->
-    <section class="hero philosophy" id="sobre">
-        <div class="hero-content centered reveal">
-            <h2 class="hero-quote">
-                "A maquiagem não deve ser uma máscara que esconde quem você é. Ela é uma ferramenta poderosa para trazer à tona a sua luz mais autêntica."
-            </h2>
+    <!-- Section 2: About Me -->
+    <section class="about-section" id="sobre">
+        <div class="about-container reveal">
+            <div class="about-image-wrapper">
+                <img src="Livia Duarte. Perfil.jpg" alt="Lívia Duarte - Maquiadora Profissional" class="about-image">
+            </div>
+            <div class="about-content">
+                <span class="eyebrow">A Profissional</span>
+                <h2 class="section-title">Lívia Duarte</h2>
+                <p>
+                    Com anos de experiência no mercado de beleza, sou apaixonada por transformar e elevar a autoestima através da maquiagem. Minha missão é entender a sua essência e traduzi-la em uma produção impecável que destaca o que você tem de melhor.
+                </p>
+                <p>
+                    Especialista em produções sofisticadas para eventos, ofereço um atendimento exclusivo e atencioso, garantindo que o seu momento de beleza seja relaxante e inesquecível.
+                </p>
+                <a href="#contato" class="btn-primary" style="margin-top: 1rem;">
+                    Fale comigo
+                    <div class="btn-icon">
+                        <i class="ph ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -71,7 +99,13 @@
         
         <div class="bento-grid">
             <!-- Service 1 -->
-            <div class="bento-card col-span-2 reveal">
+            <div class="bento-card reveal gallery-trigger" data-gallery="noivas">
+                <div class="card-image-wrapper">
+                    <img src="noivas/Noiva 1.png" alt="Casamentos & Noivas" class="card-image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-btn">Ver Curadoria <i class="ph ph-arrow-up-right"></i></span>
+                    </div>
+                </div>
                 <div class="card-inner">
                     <h3>Casamentos & Noivas</h3>
                     <p>Um dia inesquecível exige uma maquiagem impecável, à prova de emoções. Atendimento focado na noiva e acompanhantes, no conforto do seu local de escolha.</p>
@@ -79,15 +113,27 @@
             </div>
             
             <!-- Service 2 -->
-            <div class="bento-card reveal delay-1">
-                <div class="card-inner bg-dark text-light">
+            <div class="bento-card reveal delay-1 gallery-trigger" data-gallery="formaturas">
+                <div class="card-image-wrapper">
+                    <img src="Formatura/Formanda 1.png" alt="Formaturas" class="card-image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-btn">Ver Curadoria <i class="ph ph-arrow-up-right"></i></span>
+                    </div>
+                </div>
+                <div class="card-inner">
                     <h3>Formaturas</h3>
                     <p>Brilhe na sua noite de conquista com produções modernas e de alta durabilidade.</p>
                 </div>
             </div>
 
             <!-- Service 3 -->
-            <div class="bento-card reveal">
+            <div class="bento-card reveal gallery-trigger" data-gallery="gala">
+                <div class="card-image-wrapper">
+                    <img src="Festa de gala/gala 1.png" alt="Festas de Gala" class="card-image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-btn">Ver Curadoria <i class="ph ph-arrow-up-right"></i></span>
+                    </div>
+                </div>
                 <div class="card-inner">
                     <h3>Festas de Gala</h3>
                     <p>Glamour na medida certa. Produções sofisticadas para eventos noturnos, jantares e recepções de gala.</p>
@@ -95,8 +141,14 @@
             </div>
 
             <!-- Service 4 -->
-            <div class="bento-card col-span-2 reveal delay-1">
-                <div class="card-inner border-only">
+            <div class="bento-card reveal delay-1 gallery-trigger" data-gallery="eventos">
+                <div class="card-image-wrapper">
+                    <img src="eventos/Evento 1.png" alt="Eventos Casuais & Ensaios" class="card-image">
+                    <div class="gallery-overlay">
+                        <span class="gallery-btn">Ver Curadoria <i class="ph ph-arrow-up-right"></i></span>
+                    </div>
+                </div>
+                <div class="card-inner">
                     <h3>Eventos Casuais & Ensaios</h3>
                     <p>Uma beleza natural e iluminada para almoços, batizados e ensaios fotográficos de moda ou gestante.</p>
                 </div>
@@ -105,29 +157,54 @@
     </section>
 
     <!-- Contact & Footer -->
+    <!-- Contact & Footer -->
     <footer class="footer" id="contato">
         <div class="footer-container reveal">
-            <div class="footer-main">
-                <h2 class="footer-title">Vamos criar algo lindo?</h2>
-                <p class="footer-subtitle">Atendimento exclusivo a domicílio. Entre em contato para disponibilidade de datas e orçamentos.</p>
+            <div class="footer-layout">
+                <!-- Image Card -->
+                <div class="footer-image-card">
+                    <img src="Livia Duarte.jpg" alt="Lívia Duarte">
+                </div>
                 
-                <div class="contact-links">
-                    <a href="#" class="btn-social">
-                        <i class="ph ph-whatsapp-logo"></i> WhatsApp
-                    </a>
-                    <a href="#" class="btn-social">
-                        <i class="ph ph-instagram-logo"></i> Instagram
-                    </a>
-                    <a href="#" class="btn-social">
-                        <i class="ph ph-facebook-logo"></i> Facebook
-                    </a>
+                <!-- Content -->
+                <div class="footer-main">
+                    <h2 class="footer-title">Assine a sua beleza.</h2>
+                    <p class="footer-subtitle">A maquiagem perfeita é aquela que reflete a sua essência. Entre em contato para conversarmos sobre o seu evento e garantir um atendimento exclusivo e personalizado, feito sob medida para você brilhar.</p>
+                    
+                    <div class="contact-links">
+                        <!-- INSIRA SEU NÚMERO NO LUGAR DE "55SEUNUMEROAQUI" -->
+                        <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá,%20gostaria%20de%20agendar%20um%20horário" target="_blank" class="btn-social">
+                            <i class="ph ph-whatsapp-logo"></i> WhatsApp
+                        </a>
+                        <!-- INSIRA SEU USUÁRIO DO INSTAGRAM ABAIXO -->
+                        <a href="https://instagram.com/SEU_USUARIO_AQUI" target="_blank" class="btn-social">
+                            <i class="ph ph-instagram-logo"></i> Instagram
+                        </a>
+                        <!-- INSIRA SUA PÁGINA DO FACEBOOK ABAIXO -->
+                        <a href="https://facebook.com/SEU_USUARIO_AQUI" target="_blank" class="btn-social">
+                            <i class="ph ph-facebook-logo"></i> Facebook
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Maquiadora Profissional. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Lívia Duarte. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Premium Lightbox Gallery -->
+    <div id="gallery-modal" class="lightbox-modal">
+        <div class="lightbox-content">
+            <button class="lightbox-close"><i class="ph ph-x"></i></button>
+            <div class="lightbox-image-container">
+                <img id="lightbox-img" src="" alt="Galeria">
+                <button class="lightbox-prev"><i class="ph ph-caret-left"></i></button>
+                <button class="lightbox-next"><i class="ph ph-caret-right"></i></button>
+            </div>
+            <div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">5</span></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
