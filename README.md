@@ -5,7 +5,7 @@ Este é um projeto de landing page/portfólio desenvolvido para profissionais de
 ## 🌟 Diferenciais do Projeto
 
 - **Design Premium & Minimalista:** Interface moderna com uso estratégico de tipografia elegante, espaços em branco e um contraste refinado.
-- **Micro-interações e Animações Suaves:** Efeitos de hover magnéticos, fade-ins ao rolar a página (scroll reveal) e transições CSS de alta performance.
+- **Micro-interações e Animações Suaves:** Efeitos de hover magnéticos nos botões, zoom suave interativo nas fotos de destaque (como no rodapé) e fade-ins ao rolar a página (scroll reveal) para uma experiência de alta performance.
 - **Portfólio Interativo (Bento Grid):** Os cards de serviços funcionam como capas dinâmicas que alternam fotos automaticamente (slideshow) a cada 4 segundos, dando vida à página.
 - **Galeria Lightbox Exclusiva:** Ao clicar em um serviço, o usuário é imerso em uma galeria de tela cheia (com navegação por setas) contendo uma curadoria específica para aquele nicho, sem poluir a interface principal.
 - **Foco em Conversão (CTAs Estratégicos):** Botões de agendamento estrategicamente posicionados e integrados com a API do WhatsApp para facilitar o contato direto.
